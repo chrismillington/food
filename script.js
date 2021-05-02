@@ -1,5 +1,12 @@
+document.querySelector('.menu').addEventListener('click',()=>{
+    document.querySelectorAll('.target').forEach((item)=>{
+        item.classList.toggle('change')
+    })
+})
+
 const icons = document.querySelectorAll(".section-1-icons i");
 let i = 1
+
 setInterval(()=>{
     i++
     const icon = document.querySelector(".section-1-icons .change")
@@ -14,7 +21,4 @@ setInterval(()=>{
 
 },4000)
 
-const crd = document.querySelectorAll(".card");
-crd[1] = addEventListener("click",()=>{
-    console.log("We Hear you")
-});
+
