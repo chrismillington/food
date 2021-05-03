@@ -1,7 +1,8 @@
 /* Default Styles */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
 
-*{
+
+*{/* This section removes all preset settings from site */
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -18,19 +19,23 @@ html{
 
 /* Start of Navbar */
 .navbar{
-    width:100%;
+   
+    width:100%;  /* Sets amount of container code should take */
     height:14rem;
     background-color: #a79a2d;
-    position:fixed;
+    position:fixed;  /* Position fixed means its glued to the top of the screen and it ain't moving  */
     top:-14rem;
     z-index:100;
     display:flex;
     justify-content: center;
     align-items: center;
+    /* Box shadow sets shadow. x y blur color */
     box-shadow: .2rem .2rem .2rem #000;
+    /* Specifies how a property can change - Property time delay */
     transition:top 0.4s;
 }
 .navbar.change{
+    /* How far from the top is the item */
     top:0;
     
 }
@@ -43,11 +48,11 @@ html{
     align-items: center;
     transition:color 0.3s;
     opacity:0;
-    transition:color 0.3s;
 }
 .change .navbar-link{
     opacity: 1;
 }
+ /* Specifies how a property can change - Property time delay */
 .change .navbar-link:nth-child(1){
     transition:opacity 0.4s 0.5s,
     color .3s;
@@ -130,8 +135,10 @@ html{
     font-size: 35rem;
     color:#a79a2d;
     position:absolute;
+    /* Transform specifies how things will act if changed. Here, they will mote to centre and grow to a certain size */
     transform: translate(-50%,-50%)scale(0);
     text-shadow: 0.2rem 0.2rem 0.2rem #000;
+    /* Transition wants to move to change the property listed and take .3secs doing it */
     transition: transform .3s;
 }
 .section-1-icons i.change{
@@ -178,22 +185,10 @@ html{
     position:absolute;
     top:0;
     left:-1rem;
-    transform: skewY(45deg);
     transform-origin: right;
     box-shadow: -.1 -.1 -.1 #111;
 }
-.card::after{
-    content:"";
-    height:1rem;
-    width:100%;
-    background-color: #8f8317;
-    position:absolute;
-    top: -1;
-    left: 0rem;
-    transform: skewX(45deg);
-    transform-origin: bottom;
-    box-shadow: -0.1 -0.1 -0.1 #111;
-}
+
 .card img{
     width:100%;
 }
